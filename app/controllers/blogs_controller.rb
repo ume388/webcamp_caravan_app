@@ -1,6 +1,8 @@
 class BlogsController < ApplicationController
   def index
     @blogs = Blog.all
+    p "標準出力のみに反映"
+    logger.debug("標準出力とログファイルに記録")
   end
 
   def show
